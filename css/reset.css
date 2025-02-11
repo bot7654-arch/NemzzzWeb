@@ -1,0 +1,72 @@
+﻿/* Сброс стилей для всех элементов на странице */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Сброс стилей для html и body */
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+/* Убираем стандартные отступы у списков */
+ul, ol {
+    list-style: none;
+}
+
+/* Убираем стандартные отступы у блоков и таблиц */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Сброс стилей для изображений */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Убираем подчеркивание у ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Убираем поля и отступы у форм */
+button, input, select, textarea {
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+/* Сброс стилей для блоков */
+blockquote, q {
+    quotes: none;
+}
+
+/* Убираем стандартные отступы у элементов */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Сброс для div и других блоков */
+div, span {
+    display: block;
+}
+
+/* Убираем фокус с элементов формы */
+:focus {
+    outline: none;
+}
