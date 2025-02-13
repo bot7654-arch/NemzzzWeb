@@ -83,445 +83,221 @@ div, span {
 
 /* sigmar-one-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
     font-family: 'Sigmar One';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/sigmar-one-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+    src: url('../fonts/sigmar-one-v18-latin-regular.woff2') format('woff2');
+}
 
-  html{
+html {
     box-sizing: border-box;
-  }
-  
-  *, *::before, *::after{
-    box-sizing: inherit;
-  }
-  .item{
-    width: 200px;
-    height: 100px;
-    background-color: black;
-    padding: 20px;
-  }
+}
 
-  /* Стили для body */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 body {
     font-family: "Sigmar One", sans-serif;
-    height: 100vh; /* Высота окна */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Это заставляет элементы располагаться вертикально */
-    justify-content: flex-start; /* Все элементы начинаются с верхней границы */
-    align-items: center; /* Центрируем элементы по горизонтали */
+    flex-direction: column;
+    align-items: center;
     background-color: #000000;
+    margin: 0;
+    padding: 0;
 }
 
-/* Стили для блока с заголовком */
 .header {
     text-align: center;
-    margin-top: 51px; /* Отступ сверху от верхней границы */
+    margin-top: 51px;
+    background-color: black;
+    width: 100%;
+    max-width: 1200px;
 }
 
-/* Стили для интерактивной ссылки */
-.interactive-title {
-    text-decoration: none; /* Убираем подчеркивание */
-    color: inherit; /* Сохраняем цвет текста */
-    transition: color 0.3s ease;
-}
-
-/* Стили для 1 заголовка */
 h1 {
-    font-size: 64px; /* Размер шрифта */
+    font-size: 64px;
     color: #FF0000;
-    margin: 20px 0; /* Отступы сверху и снизу для заголовка */
-    padding: 0 15px; /* Отступы слева и справа для текста */
+    margin: 20px 0;
+    padding: 0 15px;
+    text-align: center;
 }
 
-/* Стили для 2 заголовка */
-.interactive-title + .interactive-title h1 {
-    font-size: 40px; /* Новый размер шрифта для второго заголовка */
-    margin-top: 47px; /* Отступ сверху для второго заголовка */
-    
-}
-
-
-/* Эффект при наведении */
-
-
-/* Стили для контейнера */
 .container {
-    width: 1074px; /* Фиксированная ширина контейнера */
-    height: 650px; /* Фиксированная высота контейнера */
-    background-color: none; /* Белый фон */
-    padding: 0px; /* Отступы внутри контейнера */
+    width: 90%;
+    max-width: 1074px;
+    background-color: black;
+    padding: 20px;
     margin-top: 90px;
     margin-bottom: 67px;
     display: flex;
     flex-wrap: wrap;
+    gap: 36px;
+    justify-content: center;
 }
 
-.container_1 {
-    width: 204px ;
-    height: 284px;
-    background-color: black;
-    margin-left: 36px;
-
-}
-
-.container_1 img {
-    width: 100%; /* Делаем картинку растянутой на всю ширину контейнера */
-    height: auto; /* Сохраняем пропорции */
-    transition: transform 0.3s ease-in-out; /* Плавное изменение размера */
-}
-
-.container_1 img:hover {
-    transform: scale(1.1); /* Увеличиваем картинку на 10% при наведении */
-}
-
-/* Стили для обертки изображения и подписи */
-.image-wrapper {
+.container_item {
+    width: calc(50% - 20px);
+    max-width: 204px;
+    height: 294px;
+    background-color: none;
     display: flex;
-    flex-direction: column; /* Элементы располагаются вертикально */
-    align-items: center; /* Центрируем изображение и подпись по горизонтали */
+    justify-content: center;
+    align-items: center;
+    color: red;
 }
 
-/* Стили для изображения с фиксированными размерами */
-.container-image {
-    width: 204px; /* Ширина изображения */
-    height: 204px; /* Высота изображения */
-     /* Отступ слева для изображения */
+.container_item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Стили для подписи */
-.image-caption_1 {
-    text-align: center; /* Центрируем текст подписи */
-    margin-top: 10px; /* Отступ сверху для подписи */
-    font-size: 14px; /* Размер шрифта для подписи */
-    color: #FF0000; /* Цвет текста подписи */
-    width: 204px; /* Ширина подписи будет совпадать с изображением */
+.container_item img:hover {
+    transform: scale(1.1);
+}
+
+.image-caption {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;    
     
-}
-
-/* Дополнительный отступ для второй подписи */
-.image-caption_1:nth-of-type(2) {
-    margin-top: 0px; /* Отступ сверху для второй подписи */
-    font-size: 20px; /* Другой размер шрифта для второй подписи */
-
-}
-
-.container_2 {
-    width: 204px ;
-    height: 284px;
-    background-color: black;
-    margin-left: 210px; 
-}
-
-.container_2 img {
-    width: 100%; /* Делаем картинку растянутой на всю ширину контейнера */
-    height: auto; /* Сохраняем пропорции */
-    transition: transform 0.3s ease-in-out; /* Плавное изменение размера */
-}
-
-.container_2 img:hover {
-    transform: scale(1.1); /* Увеличиваем картинку на 10% при наведении */
-}
-
-.image-caption_2 {
-    text-align: center; /* Центрируем текст подписи */
-    margin-top: 10px; /* Отступ сверху для подписи */
-    font-size: 14px; /* Размер шрифта для подписи */
-    color: #FF0000; /* Цвет текста подписи */
-    width: 204px; /* Ширина подписи будет совпадать с изображением */   
-}
-
-/* Дополнительный отступ для второй подписи */
-.image-caption_2:nth-of-type(2) {
-    margin-top: 0px; /* Отступ сверху для второй подписи */
-    font-size: 20px; /* Другой размер шрифта для второй подписи */
-}
-
-.container_3 {
-    width: 204px ;
-    height: 284px;
-    background-color: black;
-    margin-left: 210px; 
-}
-
-.container_3 img {
-    width: 100%; /* Делаем картинку растянутой на всю ширину контейнера */
-    height: auto; /* Сохраняем пропорции */
-    transition: transform 0.3s ease-in-out; /* Плавное изменение размера */
-}
-
-.container_3 img:hover {
-    transform: scale(1.1); /* Увеличиваем картинку на 10% при наведении */
-}
-
-
-.image-caption_3 {
-    text-align: center; /* Центрируем текст подписи */
-    margin-top: 10px; /* Отступ сверху для подписи */
-    font-size: 14px; /* Размер шрифта для подписи */
-    color: #FF0000; /* Цвет текста подписи */
-    width: 204px; /* Ширина подписи будет совпадать с изображением */   
-}
-
-/* Дополнительный отступ для второй подписи */
-.image-caption_3:nth-of-type(2) {
-    margin-top: 0px; /* Отступ сверху для второй подписи */
-    font-size: 20px; /* Другой размер шрифта для второй подписи */
-}
-
-.container_4 {
-    width: 204px ;
-    height: 284px;
-    background-color: black;
-    margin-left: 36px; 
-    margin-top: 71px;
-}
-
-.container_4 img {
-    width: 100%; /* Делаем картинку растянутой на всю ширину контейнера */
-    height: auto; /* Сохраняем пропорции */
-    transition: transform 0.3s ease-in-out; /* Плавное изменение размера */
-}
-
-.container_4 img:hover {
-    transform: scale(1.1); /* Увеличиваем картинку на 10% при наведении */
-}
-
-.image-caption_4 {
-    text-align: center; /* Центрируем текст подписи */
-    margin-top: 10px; /* Отступ сверху для подписи */
-    font-size: 14px; /* Размер шрифта для подписи */
-    color: #FF0000; /* Цвет текста подписи */
-    width: 204px; /* Ширина подписи будет совпадать с изображением */   
-}
-
-/* Дополнительный отступ для второй подписи */
-.image-caption_4:nth-of-type(2) {
-    margin-top: 0px; /* Отступ сверху для второй подписи */
-    font-size: 20px; /* Другой размер шрифта для второй подписи */
-}
-
-.container_5 {
-    width: 204px ;
-    height: 284px;
-    background-color: black;
-    margin-left: 210px; 
-    margin-top: 71px;
-}
-
-.container_5 img {
-    width: 100%; /* Делаем картинку растянутой на всю ширину контейнера */
-    height: auto; /* Сохраняем пропорции */
-    transition: transform 0.3s ease-in-out; /* Плавное изменение размера */
-}
-
-.container_5 img:hover {
-    transform: scale(1.1); /* Увеличиваем картинку на 10% при наведении */
-}
-
-.image-caption_5 {
-    text-align: center; /* Центрируем текст подписи */
-    margin-top: 10px; /* Отступ сверху для подписи */
-    font-size: 14px; /* Размер шрифта для подписи */
-    color: #FF0000; /* Цвет текста подписи */
-    width: 204px; /* Ширина подписи будет совпадать с изображением */   
-}
-
-/* Дополнительный отступ для второй подписи */
-.image-caption_5:nth-of-type(2) {
-    margin-top: 0px; /* Отступ сверху для второй подписи */
-    font-size: 20px; /* Другой размер шрифта для второй подписи */
-}
-
-.container_6 {
-    width: 204px ;
-    height: 284px;
-    background-color: black;
-    margin-left: 210px; 
-    margin-top: 71px;
-}
-
-.container_6 img {
-    width: 100%; /* Делаем картинку растянутой на всю ширину контейнера */
-    height: auto; /* Сохраняем пропорции */
-    transition: transform 0.3s ease-in-out; /* Плавное изменение размера */
-}
-
-.container_6 img:hover {
-    transform: scale(1.1); /* Увеличиваем картинку на 10% при наведении */
-}
-
-.image-caption_6 {
-    text-align: center; /* Центрируем текст подписи */
-    margin-top: 10px; /* Отступ сверху для подписи */
-    font-size: 14px; /* Размер шрифта для подписи */
-    color: #FF0000; /* Цвет текста подписи */
-    width: 204px; /* Ширина подписи будет совпадать с изображением */   
-}
-
-/* Дополнительный отступ для второй подписи */
-.image-caption_6:nth-of-type(2) {
-    margin-top: 0px; /* Отступ сверху для второй подписи */
-    font-size: 20px; /* Другой размер шрифта для второй подписи */
 }
 
 .container_show {
-    width: 1440px; /* Фиксированная ширина контейнера */
-    height: 35px; /* Фиксированная высота контейнера */
-    background-color: none; /* Белый фон */
-    padding: 0px; /* Отступы внутри контейнера */
-    margin-bottom: 199px;
-    
-}
-
-.container_show_text{
+    width: 90%;
+    max-width: 1440px;
+    height: auto;
+    min-height: 35px;
+    background-color: none;
     text-align: center;
-    font-size: 32px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 242px;
     color: #FF0000;
-}
-
-.container_form {
-    width: 1440px; /* Фиксированная ширина контейнера */
-    height: 612px; /* Фиксированная высота контейнера */ 
-    background-color: #FF0000; /* Белый фон */
-    padding: 0px; /* Отступы внутри контейнера */
-    position: relative;
+    font-size: 32px;
 }
 
 .sign_up_text {
-    width: 1440px; /* Фиксированная ширина контейнера */
-    height: 43px; /* Фиксированная высота контейнера */ 
-    margin-top: 53px;
+    width: 90%;
+    max-width: 1440px;
+    height: auto;
+    min-height: 43px;
     background-color: none;
     text-align: center;
     font-size: 32px;
+    margin-top: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
 
-.be_the_first {
-    width: 1440px; /* Фиксированная ширина контейнера */
-    height: 35px; /* Фиксированная высота контейнера */ 
-    margin-top: 33px;
-    background-color: none;
+.container_form {
+    width: 90%;
+    max-width: 1440px;
+    background-color: red;
     text-align: center;
-    font-size: 16px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container_info {
-    width: 620px; /* Фиксированная ширина контейнера */
-    height: 216px; /* Фиксированная высота контейнера */ 
-    margin-top: 40px;
+    width: 90%;
+    max-width: 620px;
     background-color: none;
-    margin-left: 410px;
+    margin: 40px auto;
+    color: #000000;
 }
 
 
-.form_container {
-    display: flex;
-    align-items: center; /* Центрирование полей по вертикали */
-    box-sizing: border-box; /* Учитываем границы контейнера в ширине */
-}
-
-input {
+input, select, button {
+    width: 100%;
+    max-width: 620px;
+    height: 51px;
+    margin-top: 10px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid black;
     border-radius: 4px;
     font-size: 14px;
-    width: 306px; /* Ширина каждого поля */
-    box-sizing: border-box; /* Учитываем padding и border в ширине */
+    color: #000000;
 }
 
 input::placeholder {
     color: black;
+    opacity: 1; /* По умолчанию черный */
+    transition: opacity 0.1s ease-in-out;
 }
 
-#email {
-    width: 620px;  /* Ширина поля для e-mail */
-    height: 51px;  /* Высота поля для e-mail */
-    margin-top: 10px; /* Можно добавить, если хотите отступ между полями */
-}
-
-select {
-    height: 40px; /* Высота выпадающего списка */
-    border: 1px solid #ddd; /* Устанавливаем рамку для select */
-    box-sizing: border-box; /* Учитываем padding и border в ширину и высоту */
-}
-
-select option:hover {
-    color: #FF0000;
-}
-
-#country {
-    width: 620px;
-    height: 51px;
-    margin-top: 10px;
+input:focus::placeholder {
+    opacity: 0.5; /* Полупрозрачный при фокусе */
 }
 
 button {
-    padding: 10px 20px;
-    background-color: none;  /* Красный цвет фона */
-    color: black;                /* Белый текст */
-    border: none;               /* Без рамки */
-    border-radius: 4px;         /* Закругленные углы */
-    font-size: 14px;            /* Размер шрифта */
-    cursor: pointer;           /* Курсор в виде руки при наведении */
-    margin-top: 10px;           /* Отступ сверху */
-    width: 100%; 
-    border: 1px solid #ddd;               /* Ширина кнопки */
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid black;
 }
 
 button:hover {
-    background-color: #cc0000; /* Цвет фона при наведении */
+    background-color: none;
 }
 
 .container_by_sub {
-    width: 608px;        /* Фиксированная ширина контейнера */
-    height: 63px;        /* Фиксированная высота контейнера */
+    width: 90%;
+    max-width: 608px;
+    background-color:none;
+    text-align: center;
+    margin: 59px auto;
+    padding: 10px;
+}
+
+.nav_bar {
+    width: 100%;
     background-color: none;
     display: flex;
-    justify-content: center;  /* Горизонтальное центрирование содержимого */
-    align-items: center;      /* Вертикальное центрирование содержимого */
-    text-align: center;       /* Центрируем текст внутри контейнера */
-    margin-top: 59px;         /* Отступ сверху, можно убрать, если не нужно */
-    margin-left: 410px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
 }
 
-.by_sub{
-    text-align: center;
-    font-size: 13px;
- 
-}    
-
-.nav_bar{
-    width: 1440px;        /* Фиксированная ширина контейнера */
-    height: 29px;        /* Фиксированная высота контейнера */
-    background-color: none;
-    display: flex; /* Вертикальное центрирование содержимого */
-    margin-bottom: 72px;
-    margin-top: 59px;     
-}
-
-.terms{
+.terms, .privacy, .returns, .content {
     font-size: 20px;
-    color: #FF0000; 
-    margin-left: 448px;
+    color: #FF0000;
 }
 
-.privacy{
-    font-size: 20px;
-    color: #FF0000; 
-    margin-left: 57px;
+/* ===== АДАПТИВНОСТЬ ===== */
+
+@media (max-width: 1024px) {
+    .container_item {
+        width: calc(33.33% - 20px);
+    }
 }
 
-.returns{
-    font-size: 20px;
-    color: #FF0000; 
-    margin-left: 57px;
+@media (max-width: 768px) {
+    .container_item {
+        width: calc(50% - 20px);
+    }
+
+    h1 {
+        font-size: 48px;
+    }
 }
 
-.content{
-    font-size: 20px;
-    color: #FF0000; 
-    margin-left: 57px;
+@media (max-width: 480px) {
+    .container_item {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
 }
