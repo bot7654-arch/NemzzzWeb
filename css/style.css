@@ -115,6 +115,15 @@ body {
     background-color: black;
     width: 100%;
     max-width: 1200px;
+    
+}
+
+.interactive-title_1 h1 {
+    font-size: 64px;
+}
+
+.interactive-title_2 h1{
+    font-size: 40px;
 }
 
 h1 {
