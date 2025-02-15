@@ -1,0 +1,318 @@
+/* Сброс стилей для всех элементов на странице */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Сброс стилей для html и body */
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+/* Убираем стандартные отступы у списков */
+ul, ol {
+    list-style: none;
+}
+
+/* Убираем стандартные отступы у блоков и таблиц */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Сброс стилей для изображений */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Убираем подчеркивание у ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Убираем поля и отступы у форм */
+button, input, select, textarea {
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+/* Сброс стилей для блоков */
+blockquote, q {
+    quotes: none;
+}
+
+/* Убираем стандартные отступы у элементов */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Сброс для div и других блоков */
+div, span {
+    display: block;
+}
+
+/* Убираем фокус с элементов формы */
+:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* sigmar-one-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Sigmar One';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/sigmar-one-v18-latin-regular.woff2') format('woff2');
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Sigmar One", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    margin-top: 51px;
+    background-color: black;
+    width: 100%;
+    max-width: 1200px;
+    
+}
+
+.interactive-title_1 h1 {
+    font-size: 64px;
+}
+
+.interactive-title_2 h1{
+    font-size: 40px;
+}
+
+h1 {
+    font-size: 64px;
+    color: #FF0000;
+    margin: 20px 0;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1074px;
+    background-color: black;
+    padding: 20px;
+    margin-top: 90px;
+    margin-bottom: 67px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    justify-content: center;
+}
+
+.container_item {
+    width: calc(50% - 20px);
+    max-width: 204px;
+    height: 294px;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+.container_item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container_item img:hover {
+    transform: scale(1.1);
+}
+
+.image-caption {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;    
+    
+}
+
+.container_show {
+    width: 90%;
+    max-width: 1440px;
+    height: auto;
+    min-height: 35px;
+    background-color: none;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 242px;
+    color: #FF0000;
+    font-size: 32px;
+}
+
+.sign_up_text {
+    width: 90%;
+    max-width: 1440px;
+    height: auto;
+    min-height: 43px;
+    background-color: none;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.container_form {
+    width: 90%;
+    max-width: 1440px;
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_info {
+    width: 90%;
+    max-width: 620px;
+    background-color: none;
+    margin: 40px auto;
+    color: #000000;
+}
+
+
+input, select, button {
+    width: 100%;
+    max-width: 620px;
+    height: 51px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #000000;
+}
+
+input::placeholder {
+    color: black;
+    opacity: 1; /* По умолчанию черный */
+    transition: opacity 0.1s ease-in-out;
+}
+
+input:focus::placeholder {
+    opacity: 0.5; /* Полупрозрачный при фокусе */
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+button:hover {
+    background-color: none;
+}
+
+.container_by_sub {
+    width: 90%;
+    max-width: 608px;
+    background-color:none;
+    text-align: center;
+    margin: 59px auto;
+    padding: 10px;
+}
+
+.nav_bar {
+    width: 100%;
+    background-color: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.terms, .privacy, .returns, .content {
+    font-size: 20px;
+    color: #FF0000;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+
+@media (max-width: 1024px) {
+    .container_item {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .container_item {
+        width: calc(50% - 20px);
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container_item {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
+
+@media (hover: none) {
+    .container_item img:active {
+        transform: scale(1);
+    }
+}
